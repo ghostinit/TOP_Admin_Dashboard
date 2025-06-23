@@ -80,6 +80,10 @@ body {
     justify-content: center;
 }
 
+ul {
+    list-style: none;
+}
+
 /* Temporary borders on all divs */
 div {
     border: var(--border-btn);
