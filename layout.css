@@ -24,17 +24,20 @@
 /* ======================= SIDEBAR LAYOUT ======================= */
 
 .sidebar-header {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar-header-icon {
     height: 72px;
     width: auto;
+    margin: 1vh;
+    flex: 1;
 }
 
 .sidebar-header-text {
     font-size: 2em;
+    flex: 3;
 }
 
 .toggle-theme-btn {
