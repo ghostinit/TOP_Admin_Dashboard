@@ -17,6 +17,9 @@
     --color-btn-bg-active: rgb(10, 10, 10);
     --color-btn-bg-hover: rgb(20, 20, 20);
 
+    /* Menu Items */
+    --color-menu-item-bg-hover: rgb(40, 40, 40);
+
     /* Icons ===================================*/
 }
 
@@ -33,6 +36,9 @@
     --color-btn-bg: rgb(220, 220, 220);
     --color-btn-bg-active: rgb(200, 200, 200);
     --color-btn-bg-hover: rgb(180, 180, 180);
+
+    /* Menu Items */
+    --color-menu-item-bg-hover: rgb(218, 218, 218);
 
     /* Icons ===================================*/
 }
@@ -87,4 +93,14 @@ ul {
 /* Temporary borders on all divs */
 div {
     border: var(--border-btn);
+}
+
+.menu-item:hover {
+    background: var(--color-menu-item-bg-hover);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.menu-item p {
+    user-select: none;
 }

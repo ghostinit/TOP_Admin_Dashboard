@@ -40,6 +40,27 @@
     flex: 3;
 }
 
+.sidebar-menu {
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 5px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-icon {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
+
 .toggle-theme-btn {
     position: fixed;
     top: 10px;
