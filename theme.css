@@ -98,7 +98,7 @@ div {
 .menu-item:hover {
     background: var(--color-menu-item-bg-hover);
     cursor: pointer;
-    text-transform: uppercase;
+    font-size: 1.15em;
 }
 
 .menu-item p {
