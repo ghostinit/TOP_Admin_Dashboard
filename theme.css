@@ -18,7 +18,8 @@
     --color-btn-bg-hover: rgb(20, 20, 20);
 
     /* Menu Items */
-    --color-menu-item-bg-hover: rgb(40, 40, 40);
+    --color-menu-background: #0f4c6e;
+    --color-menu-item-bg-hover: rgba(255, 255, 255, .3);
 
     /* Icons ===================================*/
 }
@@ -38,7 +39,8 @@
     --color-btn-bg-hover: rgb(180, 180, 180);
 
     /* Menu Items */
-    --color-menu-item-bg-hover: rgb(218, 218, 218);
+    --color-menu-background: #1992d4;
+    --color-menu-item-bg-hover: rgba(0, 0, 0, .3);
 
     /* Icons ===================================*/
 }
@@ -93,6 +95,13 @@ ul {
 /* Temporary borders on all divs */
 div {
     border: var(--border-btn);
+}
+
+
+/* ===================== SIDEBAR THEMEING ========================== */
+.sidebar {
+    background: var(--color-menu-background);
+    color: rgb(240, 240, 240);
 }
 
 .menu-item:hover {

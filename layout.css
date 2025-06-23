@@ -29,10 +29,9 @@
 }
 
 .sidebar-header-icon {
-    height: 72px;
-    width: auto;
+    height: 4em;
+    width: 4em;
     margin: 1vh;
-    flex: 1;
 }
 
 .sidebar-header-text {
@@ -43,13 +42,14 @@
 .sidebar-menu {
     display: grid;
     grid-auto-rows: max-content;
-    gap: 5px;
+    gap: 8px;
 }
 
 .menu-item {
     display: flex;
     align-items: center;
     gap: 15px;
+    padding: 3px;
 }
 
 .menu-icon {
