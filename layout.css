@@ -1,3 +1,23 @@
+/* Main grid layout */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 17fr 83fr;
+    height: 100vh;
+}
+
+.sidebar {
+    grid-row: 1 / span 2;
+}
+
+.top-content {
+    grid-column: 2 / span 1;
+}
+
+.body-content {
+    /* grid-area: 2 / 2 / 3 / 3; */
+}
+
 .toggle-theme-btn {
     position: fixed;
     top: 10px;

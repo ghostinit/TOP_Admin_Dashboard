@@ -1,0 +1,9 @@
+Design Size -> 2048L x 2880W
+
+Sidebar width: 606 -> 606/2880 = ~.2
+
+Main grid columns = 1fr 4fr
+
+top bar height: 356 -> 356 / 2048 = .17
+
+Main grid rows = 17fr 83fr
