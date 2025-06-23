@@ -1,0 +1,62 @@
+:root {
+    --btn-border-radius: 10px;
+}
+
+:root.dark {
+    --border-btn: 1px solid rgb(220, 220, 220);
+    --color-base-bg: rgb(18, 18, 18);
+    --color-base-text: rgb(240, 240, 240);
+    --color-btn-bg: rgb(36, 36, 36);
+    --color-btn-bg-active: rgb(10, 10, 10);
+    --color-btn-bg-hover: rgb(20, 20, 20);
+}
+
+:root.light {
+    --border-btn: 1px solid rgb(36, 36, 36);
+    --color-base-bg: rgb(240, 240, 240);
+    --color-base-text: rgb(18, 18, 18);
+    --color-btn-bg: rgb(220, 220, 220);
+    --color-btn-bg-active: rgb(200, 200, 200);
+    --color-btn-bg-hover: rgb(180, 180, 180);
+}
+
+body {
+    background-color: var(--color-base-bg);
+    color: var(--color-base-text);
+}
+
+.themed-btn {
+    color: var(--color-base-text);
+    background-color: var(--color-btn-bg);
+    border: var(--border-btn);
+    font-size: 1.125rem;
+    padding: 10px 20px;
+    border-radius: var(--btn-border-radius);
+}
+
+
+.themed-btn:hover {
+    outline: var(--border-btn);
+    transform: scale(1.02);
+    background: var(--color-btn-bg-hover);
+}
+
+.themed-btn:active {
+    transform: translate(0px, -1px) scale(.98);
+    background: var(--color-btn-bg-active);
+}
+
+.toggle-theme-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+
+}
