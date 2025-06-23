@@ -1,30 +1,52 @@
 :root {
+    /* Sizes */
     --btn-border-radius: 10px;
 }
 
+/* ====================== DARK THEME ======================== */
 :root.dark {
+    /* Sizes / Borders ========================*/
     --border-btn: 1px solid rgb(220, 220, 220);
+
+    /* Colors =================================*/
     --color-base-bg: rgb(18, 18, 18);
     --color-base-text: rgb(240, 240, 240);
+
+    /* Buttons */
     --color-btn-bg: rgb(36, 36, 36);
     --color-btn-bg-active: rgb(10, 10, 10);
     --color-btn-bg-hover: rgb(20, 20, 20);
+
+    /* Icons ===================================*/
 }
 
+/* ======================= LIGHT THEME ======================== */
 :root.light {
+    /* Sizes / Borders ========================*/
     --border-btn: 1px solid rgb(36, 36, 36);
+
+    /* Colors =================================*/
     --color-base-bg: rgb(240, 240, 240);
     --color-base-text: rgb(18, 18, 18);
+
+    /* Buttons */
     --color-btn-bg: rgb(220, 220, 220);
     --color-btn-bg-active: rgb(200, 200, 200);
     --color-btn-bg-hover: rgb(180, 180, 180);
+
+    /* Icons ===================================*/
 }
 
+
+/* ============= ELEMENT THEME ===================== */
 body {
     background-color: var(--color-base-bg);
     color: var(--color-base-text);
 }
 
+/* =============== CLASSES ========================== */
+
+/* Button */
 .themed-btn {
     color: var(--color-base-text);
     background-color: var(--color-btn-bg);
@@ -51,6 +73,7 @@ body {
     top: 10px;
     right: 10px;
 }
+
 
 .title {
     display: flex;
