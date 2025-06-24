@@ -1,15 +1,18 @@
 /* Temporary borders on all divs */
-div {
+/* div {
     border: var(--border-btn);
-}
+} */
 
 :root {
     /* Sizes */
     --btn-border-radius: 20px;
+
+    --color-highlight: rgb(3, 189, 189);
 }
 
 /* ====================== DARK THEME ======================== */
 :root.dark {
+
     /* Sizes / Borders ========================*/
     --border-btn: 1px solid rgb(220, 220, 220);
 
@@ -33,10 +36,14 @@ div {
     --color-input-bg: rgb(85, 85, 85);
     --color-input-shadow: rgba(180, 180, 180, 0.5);
 
+
     /* Icons ===================================*/
     --icon-search: url('images/icons/DARK_search.svg');
     --icon-notification: url('images/icons/DARK_notification.svg');
     --icon-theme-toggle: url('images/icons/DARK_theme-light-dark.svg');
+    --icon-favorite: url('images/icons/DARK_star.svg');
+    --icon-follow: url('images/icons/DARK_follow.svg');
+    --icon-share: url('images/icons/DARK_share.svg');
 
 }
 
@@ -69,6 +76,9 @@ div {
     --icon-search: url('images/icons/LIGHT_search.svg');
     --icon-notification: url('images/icons/LIGHT_notification.svg');
     --icon-theme-toggle: url('images/icons/LIGHT_theme-light-dark.svg');
+    --icon-favorite: url('images/icons/LIGHT_star.svg');
+    --icon-follow: url('images/icons/LIGHT_follow.svg');
+    --icon-share: url('images/icons/LIGHT_share.svg');
 }
 
 
@@ -194,4 +204,36 @@ ul {
     box-shadow: 0 0 8px 2px var(--color-input-shadow);
     /* glowing focus/hover */
     transform: scale(0.95);
+}
+
+/* ==================== PROJECT CARDS ==================== */
+
+.body-left h3 {
+    padding: 10px 25px;
+    font-size: 1.3em;
+}
+
+.project-card {
+    border-radius: 15px;
+    box-shadow: 0 0 10px 2px var(--color-input-shadow);
+    display: grid;
+    grid-template-columns: 10px auto;
+}
+
+.project-card-highlight {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    background: var(--color-highlight);
+}
+
+.pCard-fav-btn {
+    background-image: var(--icon-favorite);
+}
+
+.pCard-follow-btn {
+    background-image: var(--icon-follow);
+}
+
+.pCard-share-btn {
+    background-image: var(--icon-share);
 }
