@@ -270,3 +270,25 @@ ul {
     margin-left: 5%;
     margin-top: 10px;
 }
+
+/* ======================== TRENDING CARDS ================ */
+
+.trending-card-container {
+    /* border: var(--border-btn); */
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2px var(--color-input-shadow);
+    margin: 15px 15px;
+}
+
+.trending-card {
+    padding: 0px 15px;
+    padding-top: 15px;
+}
+
+.trending-user {
+    align-self: flex-end;
+}
+
+.trending-title {
+    font-size: 1.2em;
+}

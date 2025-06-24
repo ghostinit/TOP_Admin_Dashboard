@@ -71,7 +71,7 @@ const announceContainer = document.querySelector(".announce-card-container");
 
 for (let i = 0; i < announcements.length; i++) {
     const title = announcements[i];
-    let baseHTML = `
+    let announceCard = `
     <div class="announce-card">
         <h4>${title}</h4>
         <div class="announce-desc">
@@ -81,11 +81,29 @@ for (let i = 0; i < announcements.length; i++) {
         </div>
     `
     if ((i + 1) < announcements.length) {
-        baseHTML += `
+        announceCard += `
             <div class="announce-card-divider"></div>
         </div>`;
     } else {
-        baseHTML += `</div>`;
+        announceCard += `</div>`;
     }
-    announceContainer.insertAdjacentHTML("beforeend", baseHTML);
+    announceContainer.insertAdjacentHTML("beforeend", announceCard);
+}
+
+// Trending cards
+const trendingContainer = document.querySelector(".trending-card-container");
+
+const users = ['@rebelmasterson', '@sarahnomercy', '@gustav', '@adamsmasher'];
+const avatars = ['punk1.png', 'robot1.png', 'punk2.png', 'robot2.png'];
+const names = ['Breaking the Bank', 'Freeze Dried Fixers', 'How to Pickle a Corpo', 'RipperDoc Vetting 101'];
+
+for (let i = 0; i < 4; i++) {
+    const trendingCard = `
+    <div class="trending-card">
+        <div class="trending-avatar" style="background-image: url('images/avatars/${avatars[i]}')"></div>
+        <div class="trending-user">${users[i]}</div>
+        <div class="trending-title">${names[i]}</div>
+    </div>
+    `
+    trendingContainer.insertAdjacentHTML("beforeend", trendingCard);
 }
