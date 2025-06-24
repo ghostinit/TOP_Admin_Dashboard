@@ -1,6 +1,11 @@
+/* Temporary borders on all divs */
+/* div {
+    border: var(--border-btn);
+} */
+
 :root {
     /* Sizes */
-    --btn-border-radius: 10px;
+    --btn-border-radius: 20px;
 }
 
 /* ====================== DARK THEME ======================== */
@@ -12,8 +17,11 @@
     --color-base-bg: rgb(18, 18, 18);
     --color-base-text: rgb(240, 240, 240);
 
+    /* Header */
+    --color-header-bg: rgb(45, 45, 45);
+
     /* Buttons */
-    --color-btn-bg: rgb(36, 36, 36);
+    --color-btn-bg: rgb(5, 5, 5);
     --color-btn-bg-active: rgb(10, 10, 10);
     --color-btn-bg-hover: rgb(20, 20, 20);
 
@@ -41,15 +49,18 @@
     --color-base-bg: rgb(240, 240, 240);
     --color-base-text: rgb(18, 18, 18);
 
+    /* Header */
+    --color-header-bg: rgb(220, 220, 220);
+
     /* Buttons */
-    --color-btn-bg: rgb(220, 220, 220);
+    --color-btn-bg: rgb(180, 180, 180);
     --color-btn-bg-active: rgb(200, 200, 200);
-    --color-btn-bg-hover: rgb(180, 180, 180);
+    --color-btn-bg-hover: rgb(200, 200, 200);
 
     /* Menu Items */
     --color-menu-background: #1992d4;
     --color-menu-item-bg-hover: rgba(0, 0, 0, .3);
-    --color-input-shadow: rgba(180, 180, 180, 0.5);
+    --color-input-shadow: rgba(120, 120, 120, 0.7);
 
     /* Inputs */
     --color-input-bg: rgb(225, 225, 225);
@@ -70,12 +81,12 @@ body {
 /* =============== CLASSES ========================== */
 
 /* Button */
-/* .themed-btn {
+.themed-btn {
     color: var(--color-base-text);
     background-color: var(--color-btn-bg);
-    border: var(--border-btn);
+    border: none;
     font-size: 1.125rem;
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-radius: var(--btn-border-radius);
 }
 
@@ -84,6 +95,7 @@ body {
     outline: var(--border-btn);
     transform: scale(1.02);
     background: var(--color-btn-bg-hover);
+    box-shadow: 2px 2px 10px var(--color-input-shadow);
 }
 
 .themed-btn:active {
@@ -91,7 +103,7 @@ body {
     background: var(--color-btn-bg-active);
 }
 
-.toggle-theme-btn {
+/* .toggle-theme-btn {
     position: fixed;
     top: 10px;
     right: 10px;
@@ -105,11 +117,6 @@ body {
 
 ul {
     list-style: none;
-}
-
-/* Temporary borders on all divs */
-div {
-    border: var(--border-btn);
 }
 
 
@@ -131,6 +138,10 @@ div {
 
 
 /* ====================== HEADER THEMING ============================== */
+
+.top-content {
+    background: var(--color-header-bg);
+}
 
 .search {
     background-color: var(--color-input-bg);

@@ -57,8 +57,10 @@
     height: 32px;
 }
 
-/* ========================== TOP CONTENT LAYOUT ======================== */
+/* ========================== HEADER CONTENT LAYOUT ======================== */
 
+
+/* HEADER - UPPER GRID  ======================*/
 .top-content {
     display: grid;
     grid-template-rows: 2fr 3fr;
@@ -70,17 +72,7 @@
     grid-template-columns: 80px 2fr 1fr 80px 80px 80px 30ch;
 }
 
-.icon-small {
-    width: 32px;
-    height: 32px;
-}
-
-.icon-medium {
-    width: 40px;
-    height: 40px;
-}
-
-.avatar-small {
+.upper-avatar {
     width: 64px;
     height: 64px;
 }
@@ -116,4 +108,61 @@
     margin: 25px;
     padding: 5px 15px;
     border-radius: 15px;
+}
+
+/* HEADER SECTION - LOWER GRID ===================== */
+
+/* left side =======================*/
+.top-lower-grid {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+}
+
+.lower-grid-left {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.lower-avatar {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 120px;
+    height: 120px;
+    justify-self: right;
+    align-self: center;
+    margin-right: 15px;
+}
+
+.user-greeting {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 1em;
+    align-self: flex-end;
+}
+
+.username-at {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 1.6em;
+}
+
+/* right side =================== */
+
+.lower-grid-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.header-btn {
+    align-self: center;
+}
+
+#new-button {
+    justify-self: right;
+}
+
+#upload-button {
+    justify-self: center;
+}
+
+#share-button {
+    justify-self: left;
 }
