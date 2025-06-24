@@ -223,6 +223,20 @@ body {
 }
 
 
+.project-card-container,
+.announce-card-container,
+.trending-card-container {
+    /* overflow-y: scroll; */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.project-card-container::-webkit-scrollbar,
+.announce-card-container::-webkit-scrollbar,
+.trending-card-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
 
 /* RIGHT CONTENT */
 
@@ -230,14 +244,19 @@ body {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     min-height: 0;
+    gap: 25px;
+    padding: 15px;
 }
 
+
+/* Announcements */
 .announcements {
     display: grid;
     grid-template-rows: auto 1fr;
     overflow: hidden;
     min-height: 0;
 }
+
 
 .announce-card-container {
     display: grid;
@@ -246,6 +265,8 @@ body {
     overflow-y: auto;
     max-height: 100%;
 }
+
+/* Trending */
 
 .trending {
     display: grid;

@@ -208,6 +208,8 @@ ul {
 
 /* ==================== PROJECT CARDS ==================== */
 
+.announcements h3,
+.trending h3,
 .body-left h3 {
     padding: 10px 25px;
     font-size: 1.3em;
@@ -236,4 +238,35 @@ ul {
 
 .pCard-share-btn {
     background-image: var(--icon-share);
+}
+
+
+/* ==================== ANNOUNCEMENT CARDS ================== */
+
+.announce-card-container {
+    /* border: var(--border-btn); */
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2px var(--color-input-shadow);
+    margin: 15px 15px;
+}
+
+.announce-card {
+    padding: 0px 15px;
+    padding-top: 15px;
+}
+
+.announce-card h4 {
+    font-size: 1.2em;
+}
+
+.announce-desc {
+    margin-top: 5px;
+}
+
+.announce-card-divider {
+    background-color: var(--color-base-text);
+    height: 1px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
 }

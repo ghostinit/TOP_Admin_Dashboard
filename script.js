@@ -59,3 +59,33 @@ cardTitles.forEach((title) => {
 
     pCardContainer.insertAdjacentHTML("beforeend", cardHTML);
 });
+
+
+// Announcement Cards
+const announcements = ['Site Maintenance',
+    'Annual CyberCon',
+    'Safety Bulletin',
+    'Community Guidelines']
+
+const announceContainer = document.querySelector(".announce-card-container");
+
+for (let i = 0; i < announcements.length; i++) {
+    const title = announcements[i];
+    let baseHTML = `
+    <div class="announce-card">
+        <h4>${title}</h4>
+        <div class="announce-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque vestibulum, diam a commodo lacinia, lectus nisl luctus metus, non rhoncus
+            justo mi at arcu.
+        </div>
+    `
+    if ((i + 1) < announcements.length) {
+        baseHTML += `
+            <div class="announce-card-divider"></div>
+        </div>`;
+    } else {
+        baseHTML += `</div>`;
+    }
+    announceContainer.insertAdjacentHTML("beforeend", baseHTML);
+}
