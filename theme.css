@@ -1,7 +1,7 @@
 /* Temporary borders on all divs */
-/* div {
+div {
     border: var(--border-btn);
-} */
+}
 
 :root {
     /* Sizes */
