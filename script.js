@@ -4,7 +4,7 @@ function setTheme() {
     root.className = newTheme;
 }
 
-document.querySelector('.toggle-theme-btn').addEventListener('click', setTheme);
+document.querySelector('.toggle-theme-button').addEventListener('click', setTheme);
 
 const menuItems = document.querySelectorAll(".menu-item");
 

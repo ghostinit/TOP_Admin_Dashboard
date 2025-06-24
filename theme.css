@@ -21,7 +21,15 @@
     --color-menu-background: #0f4c6e;
     --color-menu-item-bg-hover: rgba(255, 255, 255, .3);
 
+    /* Inputs */
+    --color-input-bg: rgb(85, 85, 85);
+    --color-input-shadow: rgba(180, 180, 180, 0.5);
+
     /* Icons ===================================*/
+    --icon-search: url('images/icons/DARK_search.svg');
+    --icon-notification: url('images/icons/DARK_notification.svg');
+    --icon-theme-toggle: url('images/icons/DARK_theme-light-dark.svg');
+
 }
 
 /* ======================= LIGHT THEME ======================== */
@@ -41,8 +49,15 @@
     /* Menu Items */
     --color-menu-background: #1992d4;
     --color-menu-item-bg-hover: rgba(0, 0, 0, .3);
+    --color-input-shadow: rgba(180, 180, 180, 0.5);
+
+    /* Inputs */
+    --color-input-bg: rgb(225, 225, 225);
 
     /* Icons ===================================*/
+    --icon-search: url('images/icons/LIGHT_search.svg');
+    --icon-notification: url('images/icons/LIGHT_notification.svg');
+    --icon-theme-toggle: url('images/icons/LIGHT_theme-light-dark.svg');
 }
 
 
@@ -55,7 +70,7 @@ body {
 /* =============== CLASSES ========================== */
 
 /* Button */
-.themed-btn {
+/* .themed-btn {
     color: var(--color-base-text);
     background-color: var(--color-btn-bg);
     border: var(--border-btn);
@@ -80,7 +95,7 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-}
+} */
 
 
 .title {
@@ -112,4 +127,60 @@ div {
 
 .menu-item p {
     user-select: none;
+}
+
+
+/* ====================== HEADER THEMING ============================== */
+
+.search {
+    background-color: var(--color-input-bg);
+    color: var(--color-base-text)
+}
+
+.search:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px var(--color-input-shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-button {
+    background-image: var(--icon-search);
+}
+
+.notification-button {
+    background-image: var(--icon-notification);
+}
+
+.toggle-theme-button {
+    background-image: var(--icon-theme-toggle);
+}
+
+.toggle-theme-button,
+.search-button,
+.notification-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-theme-button:hover:not(:active),
+.notification-button:hover:not(:active),
+.search-button:hover:not(:active) {
+    box-shadow: 0 0 8px 2px var(--color-input-shadow);
+    /* glowing focus/hover */
+    transform: scale(1.05);
+}
+
+.toggle-theme-button:active,
+.notification-button:active,
+.search-button:active {
+    box-shadow: 0 0 8px 2px var(--color-input-shadow);
+    /* glowing focus/hover */
+    transform: scale(0.95);
 }

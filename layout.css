@@ -60,26 +60,19 @@
 /* ========================== TOP CONTENT LAYOUT ======================== */
 
 .top-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
 }
 
-.top-upper-flex {
-    flex: 2;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-around; */
+.top-upper-grid {
+    display: grid;
     width: 100%;
-    padding-right: 2vw;
-}
-
-.top-lower-flex {
-    flex: 3;
+    grid-template-columns: 80px 2fr 1fr 80px 80px 80px 30ch;
 }
 
 .icon-small {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
 .icon-medium {
@@ -88,28 +81,39 @@
 }
 
 .avatar-small {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
 }
 
-.search-icon {
-    margin-left: 3vw;
+.username {
+    font-size: 1.5em;
+}
+
+.upper-avatar,
+.username {
+    justify-self: center;
+    align-self: center;
+}
+
+.toggle-theme-button,
+.notification-button,
+.search-button {
+    width: 32px;
+    height: 32px;
+    align-self: center;
+}
+
+.toggle-theme-button,
+.notification-button {
+    justify-self: center;
+}
+
+.search-button {
+    justify-self: right;
 }
 
 .search {
-    width: 30vw;
-    margin-left: 1vw;
-    margin-right: auto;
-}
-
-.notification-icon {
-    margin-right: 1.5vw;
-}
-
-.upper-avatar {
-    margin-right: 1.5vw;
-}
-
-.toggle-theme {
-    margin-right: 1.5vw;
+    margin: 25px;
+    padding: 5px 15px;
+    border-radius: 15px;
 }
