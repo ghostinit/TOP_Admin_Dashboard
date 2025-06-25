@@ -25,7 +25,7 @@ const cardTitles = ['Open Source Rebellion',
     'Reverse Osmosis',
     'Diary of a Netrunner',
     'How to Pickle a Corpo',
-    'Finding a Solid Fixer',
+    'Choom or No Choom',
     'In Case of Flatline...',
     'Braindance or Quit',
     'Mod My Cyberdeck',
@@ -95,7 +95,7 @@ const trendingContainer = document.querySelector(".trending-card-container");
 
 const users = ['@rebelmasterson', '@sarahnomercy', '@gustav', '@adamsmasher'];
 const avatars = ['punk1.png', 'robot1.png', 'punk2.png', 'robot2.png'];
-const names = ['Breaking the Bank', 'Freeze Dried Fixers', 'How to Pickle a Corpo', 'RipperDoc Vetting 101'];
+const names = [`Don't Be a Gonk!`, 'Freeze Dried Fixers', 'How to Pickle a Corpo', 'RipperDoc Vetting 101'];
 
 for (let i = 0; i < 4; i++) {
     const trendingCard = `
@@ -107,3 +107,24 @@ for (let i = 0; i < 4; i++) {
     `
     trendingContainer.insertAdjacentHTML("beforeend", trendingCard);
 }
+
+const highlightPicker = document.querySelector("#highlight-picker");
+highlightPicker.value = "#00d6d6";
+
+function alterColor(hex, percent) {
+    const amt = Math.round(2.55 * percent);
+    return hex.replace(/[\da-f]{2}/gi, c =>
+        ("0" + Math.max(0, Math.min(255, parseInt(c, 16) - amt)).toString(16)).slice(-2)
+    );
+}
+
+highlightPicker.addEventListener('input', (event) => {
+    const newColor = event.target.value;
+    const btnLighter = alterColor(newColor, -10);
+    const btnDarker = alterColor(newColor, 10);
+    document.documentElement.style.setProperty('--color-highlight', newColor);
+    document.documentElement.style.setProperty('--color-btn-bg-active', btnDarker);
+    document.documentElement.style.setProperty('--color-btn-bg-hover', btnLighter);
+});
+
+// const newColor = darkenHex("00d6d6", 10); // returns something like "00bfbf"

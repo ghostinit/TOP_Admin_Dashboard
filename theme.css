@@ -26,8 +26,11 @@
     /* Sizes */
     --btn-border-radius: 20px;
 
-    /* --color-highlight: rgb(4, 214, 214); */
-    --color-highlight: rgb(0, 209, 45);
+    --color-highlight: rgb(4, 214, 214);
+
+    --color-btn-bg-active: rgb(0, 167, 167);
+    --color-btn-bg-hover: rgb(12, 202, 202);
+    /* --color-highlight: rgb(0, 209, 45); */
 }
 
 /* ====================== DARK THEME ======================== */
@@ -46,8 +49,8 @@
 
     /* Buttons */
     --color-btn-bg: rgb(5, 5, 5);
-    --color-btn-bg-active: rgb(0, 167, 167);
-    --color-btn-bg-hover: rgb(12, 202, 202);
+    /* --color-btn-bg-active: rgb(0, 167, 167);
+    --color-btn-bg-hover: rgb(12, 202, 202); */
 
     /* Menu Items */
     /* --color-menu-background: #0f4c6e; */
@@ -100,8 +103,6 @@
 
     /* Buttons */
     --color-btn-bg: rgb(180, 180, 180);
-    --color-btn-bg-active: rgb(0, 167, 167);
-    --color-btn-bg-hover: rgb(12, 202, 202);
 
     /* Menu Items */
     /* --color-menu-background: #1992d4; */
@@ -214,7 +215,7 @@ Glowing Text .trending-user,
     border-radius: 15px;
 }
 
-.menu-item:hover {
+.menu-item:hover:not(.ignore-hover) {
     background: var(--color-menu-item-bg-hover);
     cursor: pointer;
     font-size: 1.15em;
