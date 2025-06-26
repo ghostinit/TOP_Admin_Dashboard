@@ -1,3 +1,4 @@
+// Simple JS for toggling the page theme
 function setTheme() {
     const root = document.documentElement;
     const newTheme = root.className === 'dark' ? 'light' : 'dark';
@@ -6,6 +7,11 @@ function setTheme() {
 
 document.querySelector('.toggle-theme-button').addEventListener('click', setTheme);
 
+
+// Event listeners on the sidebar menu items
+// Wanted to make sure I could get unique information
+// from li elements so that they behave as links.
+// Opening the console will show the unique information.
 const menuItems = document.querySelectorAll(".menu-item");
 
 Array.from(menuItems).forEach((element) => {
@@ -17,8 +23,14 @@ Array.from(menuItems).forEach((element) => {
 });
 
 
-// Project cards
+// The project cards, announcement cards and trending cards are all populated
+// via JS for 2 main reasons:
 
+// 1) Keep HTML clean and more readable
+// 2) In the future this will be the design pattern anyway since this
+//    information would come from a database, API or other source.
+
+// Populate the Project cards
 const cardTitles = ['Open Source Rebellion',
     'Free Swag',
     'GNU Mayhem',
@@ -30,8 +42,6 @@ const cardTitles = ['Open Source Rebellion',
     'Braindance or Quit',
     'Mod My Cyberdeck',
     'Those Are My Eddies']
-
-
 
 const pCardContainer = document.querySelector(".project-card-container");
 
@@ -60,8 +70,7 @@ cardTitles.forEach((title) => {
     pCardContainer.insertAdjacentHTML("beforeend", cardHTML);
 });
 
-
-// Announcement Cards
+// Populated Announcement cards
 const announcements = ['Site Maintenance',
     'Annual CyberCon',
     'Safety Bulletin',
@@ -90,7 +99,7 @@ for (let i = 0; i < announcements.length; i++) {
     announceContainer.insertAdjacentHTML("beforeend", announceCard);
 }
 
-// Trending cards
+// Populate the trending cards
 const trendingContainer = document.querySelector(".trending-card-container");
 
 const users = ['@rebelmasterson', '@sarahnomercy', '@gustav', '@adamsmasher'];
@@ -108,23 +117,28 @@ for (let i = 0; i < 4; i++) {
     trendingContainer.insertAdjacentHTML("beforeend", trendingCard);
 }
 
+// Functionality to change the Highlight color of the page
+// for a customizable user experience
 const highlightPicker = document.querySelector("#highlight-picker");
 highlightPicker.value = "#00d6d6";
 
+// Function to darken or lighten the selected color
+// I did not write this, I had help
+// HSL may be a better way to do this, but then we're
+// needing to convert event.target.value from hex to HSL
+// and that is possibly not any simplier
 function alterColor(hex, percent) {
     const amt = Math.round(2.55 * percent);
     return hex.replace(/[\da-f]{2}/gi, c =>
-        ("0" + Math.max(0, Math.min(255, parseInt(c, 16) - amt)).toString(16)).slice(-2)
+        ("0" + Math.max(0, Math.min(255, parseInt(c, 16) + amt)).toString(16)).slice(-2)
     );
 }
 
 highlightPicker.addEventListener('input', (event) => {
     const newColor = event.target.value;
-    const btnLighter = alterColor(newColor, -10);
-    const btnDarker = alterColor(newColor, 10);
+    const btnLighter = alterColor(newColor, 10); // +10 'lightness'
+    const btnDarker = alterColor(newColor, -10); // -10 'lightness'
     document.documentElement.style.setProperty('--color-highlight', newColor);
     document.documentElement.style.setProperty('--color-btn-bg-active', btnDarker);
     document.documentElement.style.setProperty('--color-btn-bg-hover', btnLighter);
 });
-
-// const newColor = darkenHex("00d6d6", 10); // returns something like "00bfbf"

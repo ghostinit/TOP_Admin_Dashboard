@@ -1,8 +1,3 @@
-/* Temporary borders on all divs */
-/* div {
-    border: var(--border-btn);
-} */
-
 /* FONTS */
 @font-face {
     font-family: 'Orbitron';
@@ -30,7 +25,8 @@
 
     --color-btn-bg-active: rgb(0, 167, 167);
     --color-btn-bg-hover: rgb(12, 202, 202);
-    /* --color-highlight: rgb(0, 209, 45); */
+    --color-input-shadow: var(--color-highlight);
+    --color-menu-background: var(--color-highlight);
 }
 
 /* ====================== DARK THEME ======================== */
@@ -49,20 +45,13 @@
 
     /* Buttons */
     --color-btn-bg: rgb(5, 5, 5);
-    /* --color-btn-bg-active: rgb(0, 167, 167);
-    --color-btn-bg-hover: rgb(12, 202, 202); */
 
     /* Menu Items */
-    /* --color-menu-background: #0f4c6e; */
-    --color-menu-background: var(--color-highlight);
     --color-menu-item-bg-hover: rgba(255, 255, 255, .3);
     --color-menu-item-shadow: rgb(20, 20, 20);
 
     /* Inputs */
     --color-input-bg: rgb(85, 85, 85);
-    /* --color-input-shadow: rgba(180, 180, 180, 0.5); */
-    --color-input-shadow: var(--color-highlight);
-
 
     /* Icons ===================================*/
     --icon-search: url('images/icons/DARK_search.svg');
@@ -105,15 +94,11 @@
     --color-btn-bg: rgb(180, 180, 180);
 
     /* Menu Items */
-    /* --color-menu-background: #1992d4; */
-    --color-menu-background: var(--color-highlight);
     --color-menu-item-bg-hover: rgba(0, 0, 0, .3);
     --color-menu-item-shadow: rgb(20, 20, 20);
 
     /* Inputs */
     --color-input-bg: rgb(225, 225, 225);
-    /* --color-input-shadow: rgba(120, 120, 120, 0.7); */
-    --color-input-shadow: var(--color-highlight);
 
     /* Icons ===================================*/
     --icon-search: url('images/icons/LIGHT_search.svg');
@@ -172,23 +157,17 @@ body {
     background: var(--color-btn-bg-active);
 }
 
-/* .toggle-theme-btn {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-} */
-
-
 .title {
     display: flex;
     justify-content: center;
 }
 
+/* =============== ELEMENTS ============== */
 ul {
     list-style: none;
 }
 
-
+/* ====================== FONTS ================= */
 /* Font Application */
 .sidebar-header-text,
 .username,
@@ -199,9 +178,6 @@ ul {
     font-family: 'Audiowide', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-shadow: 1px 1px 3px var(--color-highlight);
 }
-
-Glowing Text .trending-user,
-.username-at {}
 
 /* ===================== SIDEBAR THEMEING ========================== */
 .sidebar {
@@ -315,7 +291,6 @@ Glowing Text .trending-user,
 .notification-button:hover:not(:active),
 .search-button:hover:not(:active) {
     box-shadow: 0 0 8px 2px var(--color-input-shadow);
-    /* glowing focus/hover */
     transform: scale(1.05);
 }
 
@@ -323,7 +298,6 @@ Glowing Text .trending-user,
 .notification-button:active,
 .search-button:active {
     box-shadow: 0 0 8px 2px var(--color-input-shadow);
-    /* glowing focus/hover */
     transform: scale(0.95);
 }
 
@@ -373,7 +347,6 @@ Glowing Text .trending-user,
 /* ==================== ANNOUNCEMENT CARDS ================== */
 
 .announce-card-container {
-    /* border: var(--border-btn); */
     border-radius: 20px;
     box-shadow: 0 0 10px 2px var(--color-input-shadow);
     margin: 15px 15px;
@@ -403,7 +376,6 @@ Glowing Text .trending-user,
 /* ======================== TRENDING CARDS ================ */
 
 .trending-card-container {
-    /* border: var(--border-btn); */
     border-radius: 20px;
     box-shadow: 0 0 10px 2px var(--color-input-shadow);
     margin: 15px 15px;
